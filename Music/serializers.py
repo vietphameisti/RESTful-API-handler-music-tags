@@ -17,7 +17,7 @@ class TrackSerializer(serializers.ModelSerializer):
         fields=('id',
                 'track_name',
                 'track_tag')
-
+    #Override the to_representation method to get the specified JSON output format 
     def to_representation(self, instance):
         format=  {
             'type':'track',

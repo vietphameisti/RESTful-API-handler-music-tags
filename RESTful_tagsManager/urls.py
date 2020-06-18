@@ -40,6 +40,7 @@ urlpatterns = [
     re_path(r'^tags/$', tag_list),
     re_path(r'^tags/(?P<pk>[0-9]+)$', tag_detail),
     
+    #The URLs corresponding to specify a particular view
     re_path(r'^tracks/$', add_queryTrackTag),
     re_path(r'^albums/$', add_queryAlbumTag),
     re_path(r'^artist/$', add_queryArtistTag),

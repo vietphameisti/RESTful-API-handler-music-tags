@@ -49,6 +49,13 @@ def tag_detail(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 ##TRACK
+'''
+This function allows adding tags into tracks via POST method, 
+and retrieve tracks' information base on input tags using the GET method (pop, rock..etc) 
+Input:  request from user
+Output: add tags into a track and display the result return
+        or display track information with input tags related 
+'''
 @api_view(['GET','POST'])
 def add_queryTrackTag(request):
     if request.method=='POST':
@@ -74,6 +81,13 @@ def add_queryTrackTag(request):
 
 
 ##ALBUM
+'''
+This function allows adding tags into albums via POST method, 
+and retrieve albums' information base on input tags using the GET method (pop, rock..etc) 
+Input:  request from user
+Output: add tags into a album and display the result return
+        or display album information with input tags related
+'''
 @api_view(['GET','POST'])
 def add_queryAlbumTag(request):
     if request.method=='POST':
@@ -97,6 +111,14 @@ def add_queryAlbumTag(request):
     
 
 ##ARTIST
+'''
+This function allows adding tags into artists via POST method, 
+and retrieve artists' information base on input tags using the GET method (pop, rock..etc) 
+Input:  request from user
+Output: add tags into a artist and display the result return
+        or display artist information with input tags related
+'''
+
 @api_view(['GET','POST'])
 def add_queryArtistTag(request):
     if request.method=='POST':
@@ -120,6 +142,13 @@ def add_queryArtistTag(request):
 
 
 ##EXPORT ALL
+'''
+This function export all information of tracks, albums, 
+and artists tagged and all the related tags
+Input:  request from user
+Output: information of tracks, albums, and artists tagged in JSON specified format
+
+'''
 @api_view(['GET'])
 def export(request):
     if request.method=='GET':
